@@ -1,31 +1,52 @@
-# Restaurant Digitization Project
+# Restaurant Menu Website
 
 ## Overview
+This project is a simple restaurant menu website built with HTML and CSS.  
+It displays different food categories and allows users to navigate between pages.
 
-This project was carried out during a professional internship.
+---
 
-The objective was to support a small restaurant in its digital transformation by improving the use of IT tools and organizing information more efficiently.
+## Pages Included
 
-## Main Tasks
+- `burgers.html` → Burger menu page
+- `tacos.html` → Tacos menu page
+- `texmex.html` → Tex-Mex menu page
+- `style.css` → Global styling for all pages
 
-- Analysis of existing processes
-- Support for digitalization initiatives
-- Data organization
-- Basic IT support
-- User assistance
+---
 
-## Skills Developed
+## Features
 
-- IT Support
-- Problem Solving
-- Communication
-- Process Analysis
-- Digital Transformation
+- Multi-page website structure
+- Clean and simple UI design
+- Organized menu categories
+- Responsive layout (basic)
 
-## Outcome
+---
 
-The project helped improve the restaurant's organization and use of digital tools.
+## Technologies Used
 
-## Context
+- HTML5
+- CSS3
 
-Professional internship completed in Brussels, Belgium.
+---
+
+## Purpose
+
+The goal of this project is to practice:
+- Web development basics
+- HTML page structuring
+- CSS styling
+- Navigation between multiple pages
+
+---
+
+## How to Run
+
+Simply open `burgers.html`, `tacos.html`, or `texmex.html` in any web browser.
+
+---
+
+## Author
+
+Academic web development project created for learning purposes.
