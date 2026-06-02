@@ -1,0 +1,196 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+.main-nav {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 3px solid #ff4500;
+  box-shadow: 0 4px 12px rgba(255, 69, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  padding: 18px;
+}
+
+.main-nav a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: #ff4500;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ffcc00;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.main-nav img {
+  width: 40px;
+  height: auto; /* garde les proportions */
+  vertical-align: middle; /* aligne bien dans la ligne du menu */
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #ff4500, #ff6600);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* MENU GRID */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+/* BURGER CARD */
+.burger {
+  background: #1f1f1f;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.burger:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(255, 165, 0, 0.25);
+}
+
+.burger img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.burger h2 {
+  font-size: 20px;
+  color: #ffcc00;
+  margin: 12px 0 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0 12px;
+}
+
+.price {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  padding: 0 12px;
+}
+
+.ingredients {
+  font-size: 14px;
+  color: #bbb;
+  padding: 0 12px 14px;
+  flex-grow: 1;
+}
+
+/* FOOTER */
+
+footer p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+footer {
+  display: flex;
+  justify-content: space-around; /* espace égal entre les blocs */
+  align-items: center; /* aligne verticalement au centre */
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 16px;
+  border-top: 4px solid #ff3300;
+  flex-wrap: wrap; /* pour que ça reste responsive */
+}
+
+footer > div {
+  flex: 1 1 200px; /* chaque div prend au moins 200px, peut s'étirer */
+  text-align: center;
+  margin: 10px;
+}
+
+footer img {
+  width: 70px;
+  height: 70px;
+  margin: 0 10px;
+  
+}
+
+#f {
+  width: 30px;  
+  height: 30px;
+  object-fit: contain;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 32px;
+  }
+  .main-nav ul {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .burger img {
+    height: 160px;
+  }
+}
